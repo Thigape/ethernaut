@@ -10,7 +10,7 @@ contract RPG is Ownable {
   
      function chooseStartSkin(uint256 choice) external {
          require(newPlayer, "You aren't a new player! Buy skins!");
-         require(choice >= 0 && choice <= 5, "This NFT doesn't exist");
+         require(choice >= 1 && choice <= 2, "This NFT doesn't exist");
          ERC721(address(this)).safeTransferFrom(address(this), msg.sender, choice);
          newPlayer = !newPlayer;
      }
