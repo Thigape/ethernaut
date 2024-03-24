@@ -159,7 +159,7 @@ function interceptConsole() {
       if (isString && arg.indexOf('Accessing PropTypes via') !== -1) return []
       if (isString && arg.indexOf('Slow network is detected.') !== -1) return []
 
-      // Icons
+      // RPG
       if (isString) {
         arg = arg.replace(new RegExp('@good', 'g'), randGoodIcon())
         arg = arg.replace(new RegExp('@bad', 'g'), randBadIcon())
@@ -248,7 +248,7 @@ function setupConsoleUtils() {
 }
 setupConsoleUtils()
 
-const ICONS_BAD = [
+const RPG_BAD = [
   '(╯°□°）╯',
   '<|º감º|>',
   '╰(◣﹏◢)╯',
@@ -275,7 +275,7 @@ const ICONS_BAD = [
   'ヽ(´o｀；',
   '(◢_◣)'
 ]
-const ICONS_GOOD = [
+const RPG_GOOD = [
   '◕_◕',
   'ˁ(⦿ᴥ⦿)ˀ',
   '◖(◣☩◢)◗',
@@ -320,5 +320,5 @@ const ICONS_GOOD = [
   '♪└(￣◇￣)┐♪└(￣◇￣)┐♪└(￣◇￣)┐♪'
 ]
 export function randInt(min, max) { return Math.floor((max - min) * Math.random()) + min }
-export function randBadIcon() { return ICONS_BAD[randInt(0, ICONS_BAD.length)] }
-export function randGoodIcon() { return ICONS_GOOD[randInt(0, ICONS_GOOD.length)] }
+export function randBadIcon() { return RPG_BAD[randInt(0, RPG_BAD.length)] }
+export function randGoodIcon() { return RPG_GOOD[randInt(0, RPG_GOOD.length)] }
