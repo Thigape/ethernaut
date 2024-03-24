@@ -5,6 +5,9 @@ require("hardhat-gas-reporter");
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
+
+const ownerPrivKey = process.env.PRIV_KEY;
+
 module.exports = {
   solidity: {
     compilers: [
@@ -43,6 +46,13 @@ module.exports = {
   networks: {
     hardhat: {
       chainId: 1337,
+    },
+  },
+
+  networks: {
+    hardhat: {
+    chainId: 1337,
+    accounts: [{ privateKey: ownerPrivKey, balance: "1000000000000000000000" }],
     },
   },
 };

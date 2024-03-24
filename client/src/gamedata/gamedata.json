@@ -466,16 +466,16 @@
       "name": "RPG",
       "created": "2024-03-23",
       "difficulty": "7",
-      "description": "game_skins.md",
-      "completedDescription": "game_skins_complete.md",
+      "description": "rpg.md",
+      "completedDescription": "rpg_complete.md",
       "levelContract": "RPG.sol",
       "instanceContract": "RPG.sol",
       "revealCode": true,
       "deployParams": [],
       "deployFunds": 0,
       "deployId": "30",
-      "instanceGas": 250000,
-      "author": "AgeManning"
+      "instanceGas": 10000000,
+      "author": "RPGTeam"
     }
   ]
 }
