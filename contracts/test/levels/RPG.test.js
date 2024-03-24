@@ -32,6 +32,7 @@ contract('RPG', function (accounts) {
       player,
       RPG
     );
+
     const completed = await utils.submitLevelInstance(
       ethernaut,
       level.address,
